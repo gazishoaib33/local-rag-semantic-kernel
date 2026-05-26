@@ -1,0 +1,21 @@
+seed: 42
+
+data:
+  train_dir: data/train
+  val_dir: data/val
+  image_size: [128, 128]
+  batch_size: 32
+
+model:
+  name: small_cnn
+  dropout: 0.3
+
+train:
+  epochs: 20
+  learning_rate: 0.0003
+  label_smoothing: 0.0
+  early_stopping_patience: 5
+
+artifacts:
+  dir: artifacts
+  model_path: artifacts/model.keras

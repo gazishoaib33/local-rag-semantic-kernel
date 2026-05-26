@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xbd-damage"
+version = "0.1.0"
+description = "Disaster damage classification (xBD) — BSc thesis recreation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Gazi Shoaib" }]
+dependencies = [
+  "tensorflow>=2.13",
+  "numpy>=1.24",
+  "opencv-python>=4.8",
+  "pillow>=10.0",
+  "pyyaml>=6.0",
+  "scikit-learn>=1.3",
+  "matplotlib>=3.7",
+  "tqdm>=4.66",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

@@ -1,0 +1,21 @@
+/.venv/
+/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# artifacts / outputs
+/artifacts/
+/runs/
+
+# data (never commit datasets)
+/data/
+/datasets/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
