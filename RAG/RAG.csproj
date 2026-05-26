@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Main program -->
+    <Compile Include="Program.cs" />
+    <Compile Include="AppConfig.cs" />
+
+    <!-- Manually include custom connectors -->
+    <Compile Include="Connectors\OllamaChatCompletion.cs" />
+    <Compile Include="Connectors\OllamaTextEmbeddingGeneration.cs" />
+    <Compile Include="Connectors\SqliteMemoryStore.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Data\bio.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- NuGet packages -->
+    <PackageReference Include="Microsoft.SemanticKernel" Version="1.0.1" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);SKEXP0001;SKEXP0003</NoWarn>
+  </PropertyGroup>
+
+</Project>
